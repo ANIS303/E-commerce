@@ -1,0 +1,22 @@
+.card {
+  
+    background: linear-gradient(135deg, #3a2225 0%, #272828 100%);
+        box-shadow: rgba(0, 0, 0, 0.4) 10px 20px 30px, rgba(63, 31, 31, 0.3) 10px 1px 53px 3px, rgba(152, 31, 31, 0.2) 0px -1px 3px inset;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: #fff;
+  }
+  
+  .card:hover {
+    transform: scale(1.04);
+  }
+  
+  .card:active {
+    transform: scale(0.95) rotateZ(1.1deg);
+  }

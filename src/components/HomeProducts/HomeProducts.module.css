@@ -1,0 +1,22 @@
+
+.card2 {
+  
+    background: rgb(102, 100, 100);
+    border: 3px inset rgb(54, 18, 18);
+    background: #635050;
+    box-shadow: inset 20px 20px 60px #c5c5c5, inset -20px -20px 60px #ffffff;
+    transition: all .5s ease-in-out;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    color: #8a8989;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .card2:hover {
+    transform: translateY(-15px);
+    transition: all .5s ease-in-out;
+  }
+  /* ---------------------------------------------------------------------------------- */
