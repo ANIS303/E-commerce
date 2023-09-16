@@ -11,7 +11,6 @@ import { useEffect, useState } from 'react';
 import jwtDecode from 'jwt-decode'
 import ProtactedRoutes from './components/protactedRoutes/protactedRoutes';
 import DetailsProducts from './components/Details-Products/Details-Products';
-import CounterContextProvider from './Context/CounterContext';
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './Context/CartContext';
 import BrandsDEtails from './components/BrandsDEtails/BrandsDEtails';
@@ -73,11 +72,9 @@ export default function App() {
   <CartContextProvider>
   <Toaster></Toaster>
     <WishContextProvider>
-  <CounterContextProvider>
    
    <RouterProvider router={routeres}></RouterProvider>
 
-  </CounterContextProvider>
   </WishContextProvider>
   </CartContextProvider>
   </>
