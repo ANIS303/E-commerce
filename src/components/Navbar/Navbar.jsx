@@ -1,20 +1,19 @@
-import React,{  useContext }  from 'react'
 import logo from '../../assest/images/e-commerce-store-digital-cloud-shopping-vector-11695082-removebg-preview.png'
 
 import { Link, NavLink } from 'react-router-dom'
-import { CartContext } from '../../Context/CartContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styles from './Navbar.module.css'
+import { useContext } from 'react'
+import { CartContext } from '../../Context/CartContext'
 
 
 
-export default function Navbar({ logOut}) {
-let{numOfCartItems}= useContext(CartContext)
+export default function Navbar({userdata, logOut}) {
   let userToken = localStorage.getItem("userInfo")
   
 
-
+  let{numOfCartItems}= useContext(CartContext)
   
   return (
 
@@ -63,7 +62,7 @@ let{numOfCartItems}= useContext(CartContext)
           </Link>
          
         </li> </div>  <li className="nav-item dropdown">
-          <Link class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear fa-spin fa-xl ms-3"></i>  </Link>
+          <Link class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear fa-spin fa-xl ms-3">{userdata?.name} </i> </Link>
   <ul class="dropdown-menu dropdown-menu-dark">
   <Link className="dropdown-item " to="/Cart"> CART</Link> 
   <Link className="dropdown-item " to="/Wishlist"> Wish list</Link> 
