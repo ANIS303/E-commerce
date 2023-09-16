@@ -47,7 +47,7 @@ let Navigate = useNavigate()
 async function resetPass(valuies){
   setIsLoading(true)
 
-  let {data} = await axios.put(`https://route-ecommerce-app.vercel.app/api/v1/auth/resetPassword`,valuies)
+  let {data} = await axios.put(`https://ecommerce.routemisr.com/api/v1/auth/resetPassword`,valuies)
 
 
    

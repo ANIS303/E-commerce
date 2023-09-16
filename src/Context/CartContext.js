@@ -37,7 +37,7 @@ console.log(data.data.data._id,'from context',data.data.numOfCartItems);
 const [cart , setCart] = useState(0)
 
  function creatCart(productId){
-   return axios.post('https://route-ecommerce.onrender.com/api/v1/cart',
+   return axios.post('https://ecommerce.routemisr.com/api/v1/cart',
     {productId:productId},
     {
         headers ,
@@ -48,7 +48,7 @@ const [cart , setCart] = useState(0)
 
 
 function getCart(){
-    return axios.get('https://route-ecommerce.onrender.com/api/v1/cart',
+    return axios.get('https://ecommerce.routemisr.com/api/v1/cart',
      
      {
          headers,
@@ -58,7 +58,7 @@ function getCart(){
  }
  
  function updateCart(id , count){
-    return axios.put(`https://route-ecommerce-app.vercel.app/api/v1/cart/${id}`,{count},
+    return axios.put(`https://ecommerce.routemisr.com/api/v1/cart/${id}`,{count},
      
      {
          headers,
@@ -68,7 +68,7 @@ function getCart(){
  }
 
  function deleteitem(id){
-    return axios.delete(`https://route-ecommerce.onrender.com/api/v1/cart/${id}`,
+    return axios.delete(`https://ecommerce.routemisr.com/api/v1/cart/${id}`,
      
      {
          headers,
@@ -78,7 +78,7 @@ function getCart(){
  }
 
  function clearData(){
-    return axios.delete(`https://route-ecommerce.onrender.com/api/v1/cart`,
+    return axios.delete(`https://ecommerce.routemisr.com/api/v1/cart`,
      
      {
          headers,
@@ -89,7 +89,7 @@ function getCart(){
 
  async function generatePayOnline(cartId ,shippingAddress){
     
-    return await axios.post(`https://route-ecommerce-app.vercel.app/api/v1/orders/checkout-session/${cartId}?url=http://localhost:3000`,
+    return await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:3000`,
     {shippingAddress:shippingAddress},
      
      {

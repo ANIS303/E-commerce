@@ -26,7 +26,7 @@ export default function WishContextProvider(props) {
 
   let getWishinglist = async () => {
     let { data } = await axios
-      .get("https://route-ecommerce.onrender.com/api/v1/wishlist", {
+      .get("https://ecommerce.routemisr.com/api/v1/wishlist", {
         headers,
       })
       .catch((err) => {})
@@ -39,7 +39,7 @@ export default function WishContextProvider(props) {
     setchanging(true);
     let { data } = await axios
       .post(
-        "https://route-ecommerce.onrender.com/api/v1/wishlist",
+        "https://ecommerce.routemisr.com/api/v1/wishlist",
         {
           productId: id,
         },
@@ -54,7 +54,7 @@ export default function WishContextProvider(props) {
   let deleteWish = async (id) => {
     setchanging(true);
     let { data } = await axios
-      .delete("https://route-ecommerce.onrender.com/api/v1/wishlist/" + id, {
+      .delete("https://ecommerce.routemisr.com/api/v1/wishlist/" + id, {
         headers,
       })
       .catch((err) => {})

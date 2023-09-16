@@ -13,7 +13,7 @@ export default function HomeProducts() {
 let {creatCart,setNumOfCartItems} = useContext(CartContext)
   const[allProducts,setAllProducts]= useState([])
 async function showPro(){
-let {data} = await axios.get('https://route-ecommerce.onrender.com/api/v1/products')
+let {data} = await axios.get('https://ecommerce.routemisr.com/api/v1/products')
 setAllProducts(data.data)
 }
 

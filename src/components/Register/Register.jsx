@@ -22,7 +22,7 @@ let navigate= useNavigate()
     console.log("battttt7", values);
     setIsLoading(true)
     setErrorMes(null)
-    let {data}=await axios.post('https://route-ecommerce.onrender.com/api/v1/auth/signup',values).catch((err)=>{
+    let {data}=await axios.post('https://ecommerce.routemisr.com/api/v1/auth/signup',values).catch((err)=>{
       setIsLoading(false)
 
       setErrorMes(err.response.data.message)

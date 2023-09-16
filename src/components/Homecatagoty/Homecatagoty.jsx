@@ -32,7 +32,7 @@ export default function Homecatagoty() {
   const[Catagory,setAllCatagory]= useState([])
 
   async function getCatagory(){
-    let {data} = await axios.get('https://route-ecommerce.onrender.com/api/v1/categories')
+    let {data} = await axios.get('https://ecommerce.routemisr.com/api/v1/categories')
     setAllCatagory(data.data)
     }
     
